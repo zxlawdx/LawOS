@@ -12,6 +12,13 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 add_executable(lawos
     src/main.c
     src/processos.c
+    src/completador.c
+    src/lawshell.c
+)
+
+# Vincular a biblioteca GNU Readline
+target_link_libraries(lawos PRIVATE
+    readline
 )
 
 # Localização dos arquivos .h

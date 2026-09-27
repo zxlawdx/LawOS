@@ -11,9 +11,13 @@ int ehNumero(const char* str){
     return 1;
 }
 
-ProcessoInfo* listarProcessos(void){
+ProcessoInfo* listarProcessos(size_t *total){
     DIR *diretorio = opendir("/proc");
-    
+    if(!total){
+        perror("Erro ao inicializar");
+        return NULL;
+    }
+
     if(!diretorio){
         perror("Erro ao abrir /proc");
         return NULL;
@@ -74,6 +78,7 @@ ProcessoInfo* listarProcessos(void){
         quantidade++;
     }
         closedir(diretorio);
+        *total = quantidade;
         return processos;
         
     }

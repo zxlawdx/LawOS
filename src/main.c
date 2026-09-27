@@ -5,9 +5,9 @@
 
 int main(){
     ProcessoInfo *processos;
-
-    processos = listarProcessos();
+    size_t qtd = 1;
+    processos = listarProcessos(&qtd);
     
-    for(int i = 0; processos != NULL; i++)
+    for(size_t i = 0; i < qtd; i++)
         printf("PID: %d - Process: %s\n", processos[i].pid, processos[i].nome);
 }

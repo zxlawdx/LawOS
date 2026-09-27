@@ -19,6 +19,6 @@ typedef struct {
 
 int ehNumero(const char* str);
 
-ProcessoInfo* listarProcessos(void);
+ProcessoInfo* listarProcessos(size_t *);
 
 #endif

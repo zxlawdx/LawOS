@@ -14,6 +14,8 @@ add_executable(lawos
     src/processos.c
     src/completador.c
     src/lawshell.c
+    src/parser.c
+    src/comandos.c
 )
 
 # Vincular a biblioteca GNU Readline

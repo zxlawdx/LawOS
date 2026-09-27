@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <dirent.h>
-
+#include <string.h>
+#define PROCESS_DIR "/proc"
 
 typedef struct {
     int pid;
@@ -13,6 +14,8 @@ typedef struct {
     int killed;
     
 } ProcessoInfo;
+
+
 
 int ehNumero(const char* str);
 
